@@ -1,0 +1,1 @@
+set up associations so owner.horses.rides works
