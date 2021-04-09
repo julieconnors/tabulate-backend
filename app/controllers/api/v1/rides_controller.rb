@@ -2,6 +2,6 @@ class Api::V1::RidesController < ApplicationController
 
     def index
         rides = Ride.all
-        render json: rides
+        render json: RideSerializer.new(rides)
     end
 end
