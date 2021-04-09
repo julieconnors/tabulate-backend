@@ -1,4 +1,4 @@
 class TrainingOptionSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :label :fee :rides
+  attributes :label, :fee, :rides
 end
