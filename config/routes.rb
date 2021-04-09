@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :rides
   resources :horses
   resources :owners
   resources :training_options
