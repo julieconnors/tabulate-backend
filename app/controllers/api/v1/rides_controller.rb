@@ -9,6 +9,8 @@ class Api::V1::RidesController < ApplicationController
         ride = Ride.new(ride_params)
         if ride.save
             render json: RideSerializer.new(ride)
+        else
+            render json: { error: "Error creating ride"}
         end
     end
 
