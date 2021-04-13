@@ -2,6 +2,8 @@ backend
     - add strong params
     - add validations
 
+    **error messages
+
     - hard code training options to be displayed
     - hard code horses
     - hard code owners
