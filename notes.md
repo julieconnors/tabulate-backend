@@ -1,19 +1,17 @@
 backend
-    - add strong params
-    - add validations
+    - add strong params (horse, ride)
+    - add validations (horse, ride)
 
     **error messages
 
-    - hard code training options to be displayed
-    - hard code horses
-    - hard code owners
-    ~ stretch goals:
-        - auth
-        - user homepage sets horses, owners, training options for account
-
 frontend
-
-    - when app loads horses are fetched, for each horse a ride form component will render
+    - clear form data
 
 styling
     - bootstrap
+
+**Fill out Readme
+
+~ stretch goals:
+    - auth
+    - user homepage sets horses, owners, training options for account
