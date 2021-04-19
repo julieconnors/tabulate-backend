@@ -10,7 +10,8 @@ class Api::V1::OwnersController < ApplicationController
         if owner.save
             render json: OwnerSerializer.new(owner)
         else
-            render json: { error: "Error creating Owner"}
+            # binding.pry
+            render json: { errors: owner.errors.full_messages }
         end
     end
 

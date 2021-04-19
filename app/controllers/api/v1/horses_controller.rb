@@ -7,15 +7,13 @@ class Api::V1::HorsesController < ApplicationController
 
     def create
         owner = Owner.find_or_create_by(name: params[:owner])
-        binding.pry
         horse = Horse.new(name: params[:name], owner_id: owner.id)
         if horse.save
             render json: HorseSerializer.new(horse)
         else
-            render json: { error: "Error creating HOrse"}
+            # binding.pry
+            render json: { status: "error", message: horse.errors.full_messages }
         end
-
-
     end
 
     private 
