@@ -10,11 +10,11 @@ Owner.destroy_all
 Horse.destroy_all
 Ride.destroy_all
 
-TrainingOption.create(label: "flat ride", fee: 30)
-TrainingOption.create(label: "jump school", fee: 50)
-TrainingOption.create(label: "lesson", fee: 75)
-TrainingOption.create(label: "coaching", fee: 125)
-TrainingOption.create(label: "show ride", fee: 100)
+TrainingOption.create(label: "Flat Ride", fee: 30)
+TrainingOption.create(label: "Jump School", fee: 50)
+TrainingOption.create(label: "Lesson", fee: 75)
+TrainingOption.create(label: "Coaching", fee: 125)
+TrainingOption.create(label: "Show Ride", fee: 100)
 
 Owner.create(name: "Gilda Piccoli")
 Owner.create(name: "Jane Fisher")
