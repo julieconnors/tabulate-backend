@@ -1,8 +1,8 @@
 class Ride < ApplicationRecord
   belongs_to :horse
-  belongs_to :training_option
+  belongs_to :service
 
-  validates :date, :horse_id, :training_option_id, presence: true
+  validates :date, :horse_id, :service_id, presence: true
 
   
 end
