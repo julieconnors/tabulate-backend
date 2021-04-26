@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_09_012045) do
+ActiveRecord::Schema.define(version: 2021_04_26_170209) do
 
   create_table "horses", force: :cascade do |t|
     t.string "name"
@@ -29,14 +29,14 @@ ActiveRecord::Schema.define(version: 2021_04_09_012045) do
   create_table "rides", force: :cascade do |t|
     t.string "date"
     t.integer "horse_id", null: false
-    t.integer "training_option_id", null: false
+    t.integer "service_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["horse_id"], name: "index_rides_on_horse_id"
-    t.index ["training_option_id"], name: "index_rides_on_training_option_id"
+    t.index ["service_id"], name: "index_rides_on_service_id"
   end
 
-  create_table "training_options", force: :cascade do |t|
+  create_table "services", force: :cascade do |t|
     t.string "label"
     t.integer "fee"
     t.datetime "created_at", precision: 6, null: false
@@ -45,5 +45,5 @@ ActiveRecord::Schema.define(version: 2021_04_09_012045) do
 
   add_foreign_key "horses", "owners"
   add_foreign_key "rides", "horses"
-  add_foreign_key "rides", "training_options"
+  add_foreign_key "rides", "services"
 end
