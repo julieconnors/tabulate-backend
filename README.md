@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Tabulate allows trainers to track billing for daily services and calculate monthly statements. 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
+* Ruby version-2.6.1
 
 * Configuration
+    Run ~ bundle install
+    Frontend repo: https://github.com/julieconnors/tabulate-frontend
 
 * Database creation
+    Run ~ rails db:migrate
 
 * Database initialization
+    Run ~ rails db:seed to run app with seeded data 
+    - Or you can run the app with a fresh db
 
-* How to run the test suite
+Run application with ~ rails s -p 5500
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
