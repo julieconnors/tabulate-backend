@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
+  resources :services
   namespace :api do
     namespace :v1 do
       resources :rides
       resources :horses
       resources :owners
-      resources :training_options
+      resources :services
     end
   end
   
