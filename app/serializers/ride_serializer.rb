@@ -1,4 +1,4 @@
 class RideSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :date, :horse_id, :training_option_id, :horse, :training_option
+  attributes :date, :horse_id, :service_id, :horse, :service
 end
