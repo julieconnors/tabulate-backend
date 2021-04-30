@@ -6,7 +6,6 @@ Tabulate allows trainers to track billing for daily services and calculate month
 
 * Configuration
     Run ~ bundle install
-    Frontend repo: https://github.com/julieconnors/tabulate-frontend
 
 * Database creation
     Run ~ rails db:migrate
@@ -15,5 +14,7 @@ Tabulate allows trainers to track billing for daily services and calculate month
     Run ~ rails db:seed to run app with seeded data 
     - Or you can run the app with a fresh db
 
-Run application with ~ rails s -p 5500
+Run application with ~ rails s -p 3001
+
+Tabulate frontend repo: https://github.com/julieconnors/tabulate-frontend
 
