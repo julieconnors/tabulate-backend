@@ -17,6 +17,6 @@ class Api::V1::RidesController < ApplicationController
     private
 
     def ride_params
-        params.require(:ride).permit(:date, :horse_id, :training_option_id)
+        params.require(:ride).permit(:date, :horse_id, :service_id)
     end
 end
