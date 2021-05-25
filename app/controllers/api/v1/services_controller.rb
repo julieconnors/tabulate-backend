@@ -6,7 +6,7 @@ class Api::V1::ServicesController < ApplicationController
     end
 
     def create
-        service = Service.new(service)
+        service = Service.new(service_params)
         if service.save
             render json: ServiceSerializer.new(service)
         else
