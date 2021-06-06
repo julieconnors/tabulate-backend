@@ -11,7 +11,6 @@ class Api::V1::HorsesController < ApplicationController
         if horse.save
             render json: HorseSerializer.new(horse)
         else
-            # binding.pry
             render json: { status: "error", message: horse.errors.full_messages }
         end
     end
