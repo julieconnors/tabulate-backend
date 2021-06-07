@@ -30,3 +30,5 @@ Horse.create(name: "Sonny", owner_id: 4)
 
 Ride.create(date: "4-8-21", horse_id: 1, service_id: 2)
 Ride.create(date: "4-7-21", horse_id: 2, service_id: 1)
+
+User.create(username: "user", password: "pass")
