@@ -3,6 +3,4 @@ class Horse < ApplicationRecord
   has_many :rides
 
   validates :name, :owner_id, presence: true
-
-
 end
