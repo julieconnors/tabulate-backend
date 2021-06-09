@@ -9,6 +9,9 @@ Service.destroy_all
 Owner.destroy_all
 Horse.destroy_all
 Ride.destroy_all
+User.destroy_all
+
+User.create(username: "user", password: "pass")
 
 Service.create(label: "Flat Ride", fee: 30, user_id: 1)
 Service.create(label: "Jump School", fee: 50, user_id: 1)
@@ -31,4 +34,3 @@ Horse.create(name: "Sonny", owner_id: 4, user_id: 1)
 Ride.create(date: "4-8-21", horse_id: 1, service_id: 2)
 Ride.create(date: "4-7-21", horse_id: 2, service_id: 1)
 
-User.create(username: "user", password: "pass")
