@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
+
+
   resources :users
   resources :services
   namespace :api do
     namespace :v1 do
+      post "login", to: "users#auth"
+
       resources :rides
       resources :horses
       resources :owners
