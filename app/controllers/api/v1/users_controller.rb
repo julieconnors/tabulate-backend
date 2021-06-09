@@ -7,10 +7,15 @@ class Api::V1::UsersController < ApplicationController
             @token = encode_token({ user_id: @user.id })
 
             render json: { user: UserSerializer.new(@user), jwt: @token }, status: :created
+        else
+            response = {
+                error: "Invalid credentials"
+            }
         end
     end
 
-    def show
+    def auth
+        binding.pry
         @user = User.find_by(username: params[:username])
         if @user && @user.authenticate(params[:password])
             @token = encode_token({ user_id: @user.id })
