@@ -10,23 +10,23 @@ Owner.destroy_all
 Horse.destroy_all
 Ride.destroy_all
 
-Service.create(label: "Flat Ride", fee: 30)
-Service.create(label: "Jump School", fee: 50)
-Service.create(label: "Lesson", fee: 75)
-Service.create(label: "Coaching", fee: 125)
-Service.create(label: "Show Ride", fee: 100)
+Service.create(label: "Flat Ride", fee: 30, user_id: 1)
+Service.create(label: "Jump School", fee: 50, user_id: 1)
+Service.create(label: "Lesson", fee: 75, user_id: 1)
+Service.create(label: "Coaching", fee: 125, user_id: 1)
+Service.create(label: "Show Ride", fee: 100, user_id: 1)
 
-Owner.create(name: "Gilda Piccoli")
-Owner.create(name: "Jane Fisher")
-Owner.create(name: "Pat Fulchino")
-Owner.create(name: "Tina Allen")
+Owner.create(name: "Gilda Piccoli", user_id: 1)
+Owner.create(name: "Jane Fisher", user_id: 1)
+Owner.create(name: "Pat Fulchino", user_id: 1)
+Owner.create(name: "Tina Allen", user_id: 1)
 
-Horse.create(name: "Ari", owner_id: 1)
-Horse.create(name: "Casper", owner_id: 2)
-Horse.create(name: "Justin", owner_id: 2)
-Horse.create(name: "Uber", owner_id: 3)
-Horse.create(name: "Enzo", owner_id: 3)
-Horse.create(name: "Sonny", owner_id: 4)
+Horse.create(name: "Ari", owner_id: 1, user_id: 1)
+Horse.create(name: "Casper", owner_id: 2, user_id: 1)
+Horse.create(name: "Justin", owner_id: 2, user_id: 1)
+Horse.create(name: "Uber", owner_id: 3, user_id: 1)
+Horse.create(name: "Enzo", owner_id: 3, user_id: 1)
+Horse.create(name: "Sonny", owner_id: 4, user_id: 1)
 
 Ride.create(date: "4-8-21", horse_id: 1, service_id: 2)
 Ride.create(date: "4-7-21", horse_id: 2, service_id: 1)
