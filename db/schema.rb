@@ -15,15 +15,19 @@ ActiveRecord::Schema.define(version: 2021_06_05_233214) do
   create_table "horses", force: :cascade do |t|
     t.string "name"
     t.integer "owner_id", null: false
+    t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["owner_id"], name: "index_horses_on_owner_id"
+    t.index ["user_id"], name: "index_horses_on_user_id"
   end
 
   create_table "owners", force: :cascade do |t|
     t.string "name"
+    t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_owners_on_user_id"
   end
 
   create_table "rides", force: :cascade do |t|
@@ -39,18 +43,23 @@ ActiveRecord::Schema.define(version: 2021_06_05_233214) do
   create_table "services", force: :cascade do |t|
     t.string "label"
     t.integer "fee"
+    t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_services_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
-    t.string "password"
+    t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "horses", "owners"
+  add_foreign_key "horses", "users"
+  add_foreign_key "owners", "users"
   add_foreign_key "rides", "horses"
   add_foreign_key "rides", "services"
+  add_foreign_key "services", "users"
 end
