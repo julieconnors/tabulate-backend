@@ -6,8 +6,11 @@ class Api::V1::HorsesController < ApplicationController
     end
 
     def create
+        user = User.find_by(id: params[:userId])
         owner = Owner.find_or_create_by(name: params[:owner])
-        horse = Horse.new(name: params[:name], owner_id: owner.id)
+        owner.user_id = user.id
+        owner.save
+        horse = Horse.new(name: params[:name], owner_id: owner.id, user_id: user.id)
         if horse.save
             render json: HorseSerializer.new(horse)
         else
@@ -18,6 +21,6 @@ class Api::V1::HorsesController < ApplicationController
     private 
 
     def horse_params
-        params.require(:horse).permit(:name, :owner_id)
+        params.require(:horse).permit(:name, :owner_id, :user_id)
     end
 end
