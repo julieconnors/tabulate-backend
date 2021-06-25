@@ -7,6 +7,7 @@ class Api::V1::ServicesController < ApplicationController
 
     def create
         service = Service.new(service_params)
+        service.user_id = params[:userId]
         if service.save
             render json: ServiceSerializer.new(service)
         else
